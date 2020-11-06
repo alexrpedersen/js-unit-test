@@ -1,5 +1,8 @@
 # js-unit-test
 
+A set of excercises in JS to answer some basic interview questions.
+<https://simpleprogrammer.com/programming-interview-questions/>
+
 ## Rules
 
 1. Only right code in existing methods located in ***-questions.js files

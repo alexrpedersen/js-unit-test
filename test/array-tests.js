@@ -36,6 +36,14 @@ describe('Array', function() {
       assert.deepStrictEqual(results, target);
     });
 
+    it('should return empty array, one element in input', function() {
+      let input = [10];
+
+      let results = arrayQuestions.findMissingIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+
     it('should return empty array, null input', function() {
       let input = null;
 
@@ -59,6 +67,41 @@ describe('Array', function() {
 
       assert.strictEqual(results.length, 1);
       assert.strictEqual(results[0], 3);
+    });
+  });
+
+  describe('#duplicateIntegers()', function() {
+    it('should return array with single value of 5', function() {
+      let input = [5, 5, 8];
+
+      let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 1);
+      assert.strictEqual(results[0], 5);
+    });
+    
+    it('should return empty array, null input', function() {
+      let input = null;
+
+      let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+    
+    it('should return empty array, one element in input', function() {
+      let input = null;
+
+      let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+    
+    it('should return empty array, no duplicates', function() {
+      let input = null;
+
+      let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 0);
     });
   });
 });
