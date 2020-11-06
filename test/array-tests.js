@@ -79,6 +79,16 @@ describe('Array', function() {
       assert.strictEqual(results.length, 1);
       assert.strictEqual(results[0], 5);
     });
+
+    it('should return array with values 5 and 8', function() {
+      let input = [5, 5, 8, 10, 8, 8];
+
+      let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 2);
+      assert.strictEqual(results[0], 5);
+      assert.strictEqual(results[1], 8);
+    });
     
     it('should return empty array, null input', function() {
       let input = null;
