@@ -10,6 +10,7 @@ describe('Array', function() {
       let results = arrayQuestions.findMissingIntegers(input)
 
       assert.strictEqual(results.length, 1);
+      assert.strictEqual(results[0], 50);
     });
     
     it('should return array with values of 50 and 51', function() {
@@ -19,14 +20,20 @@ describe('Array', function() {
       let results = arrayQuestions.findMissingIntegers(input)
 
       assert.strictEqual(results.length, 2);
+      assert.strictEqual(results[0], 50);
+      assert.strictEqual(results[1], 51);
     });
 
     it('should return array with values of 2 through 99', function() {
-      let input = [1,100];
+      let input = [0,99];
 
       let results = arrayQuestions.findMissingIntegers(input)
 
-      assert.strictEqual(results.length, 98);
+      let target = [...Array(100).keys()];
+      target.splice(99, 1);
+      target.splice(0, 1);
+     
+      assert.deepStrictEqual(results, target);
     });
 
     it('should return empty array, null input', function() {
