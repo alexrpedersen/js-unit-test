@@ -99,7 +99,7 @@ describe('Array', function() {
     });
     
     it('should return empty array, one element in input', function() {
-      let input = null;
+      let input = [42];
 
       let results = arrayQuestions.findDuplicateIntegers(input)
 
@@ -107,9 +107,57 @@ describe('Array', function() {
     });
     
     it('should return empty array, no duplicates', function() {
-      let input = null;
+      let input = [1, 2, 3, 4, 5];
 
       let results = arrayQuestions.findDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+  });
+  
+  describe('#smallestLargestIntegers()', function() {
+    it('should return array with two values 1 and 10', function() {
+      let input = [1, 2, 3, 4, 5, 6, 7, 8 ,9, 10];
+
+      let results = arrayQuestions.findSmallestAndLargestIntegers(input)
+
+      assert.strictEqual(results.length, 2);
+      assert.strictEqual(results[0], 1);
+      assert.strictEqual(results[1], 10);
+    });
+
+    it('should return array with values 5 and 32', function() {
+      let input = [32, 5, 5, 8, 10, 8, 8];
+
+      let results = arrayQuestions.findSmallestAndLargestIntegers(input)
+
+      assert.strictEqual(results.length, 2);
+      assert.strictEqual(results[0], 5);
+      assert.strictEqual(results[1], 32);
+    });
+    
+    it('should return array with values 42 and 42', function() {
+      let input = [42];
+
+      let results = arrayQuestions.findSmallestAndLargestIntegers(input)
+
+      assert.strictEqual(results.length, 2);
+      assert.strictEqual(results[0], 42);
+      assert.strictEqual(results[1], 42);
+    });
+    
+    it('should return empty array, null input', function() {
+      let input = null;
+
+      let results = arrayQuestions.findSmallestAndLargestIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+    
+    it('should return empty array, no duplicates', function() {
+      let input = new Array();
+
+      let results = arrayQuestions.findSmallestAndLargestIntegers(input)
 
       assert.strictEqual(results.length, 0);
     });
