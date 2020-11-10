@@ -1,0 +1,23 @@
+{
+  "name": "js-unit-test",
+  "version": "1.0.0",
+  "description": "Install MochaJS  - <https://mochajs.org/#installation>",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nardax/js-unit-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nardax/js-unit-test/issues"
+  },
+  "homepage": "https://github.com/Nardax/js-unit-test#readme"
+}
