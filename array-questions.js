@@ -5,7 +5,7 @@ function findMissingIntegers(input) {
     // add logic to find missing integers in input
     let missingNums = []; 
 
-    if(input) {
+    if(input && input.length > 1) {
         input.sort((a, b) => a - b);
         for (i = 1; i < input.length; i++) {
             
@@ -28,7 +28,7 @@ function findDuplicateIntegers(input) {
     // add logic to find missing integers in input
     let duplicates = [];
 
-    if(input) {
+    if(input && input.length > 1) {
 
         for (i = 1; i < input.length; i++) {
 
