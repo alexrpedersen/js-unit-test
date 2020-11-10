@@ -29,7 +29,7 @@ function findDuplicateIntegers(input) {
     let duplicates = [];
 
     if(input && input.length > 1) {
-
+        input.sort((a, b) => a - b);
         for (i = 1; i < input.length; i++) {
 
             if (input[i] === input[i - 1]) {
