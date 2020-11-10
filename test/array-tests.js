@@ -154,7 +154,7 @@ describe('Array', function() {
       assert.strictEqual(results.length, 0);
     });
     
-    it('should return empty array, no duplicates', function() {
+    it('should return empty array, no numbers', function() {
       let input = new Array();
 
       let results = arrayQuestions.findSmallestAndLargestIntegers(input)
