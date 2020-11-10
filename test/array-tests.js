@@ -81,7 +81,7 @@ describe('Array', function() {
     });
 
     it('should return array with values 5 and 8', function() {
-      let input = [5, 5, 8, 10, 8, 8];
+      let input = [5, 5, 8, 10, 8];
 
       let results = arrayQuestions.findDuplicateIntegers(input)
 
