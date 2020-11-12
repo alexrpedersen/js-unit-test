@@ -3,7 +3,23 @@
 function findMissingIntegers(input) {
 
     // add logic to find missing integers in input
+    let missingNumbers = [];
 
+    if(input) {
+
+        input.sort((a, b) => a - b);
+
+        for (i = 1; i < input.length; i++) {
+
+            while (input[i] - input[i - 1] !== 1) {
+                missingNumbers.push(++input[i - 1]);
+            }
+
+        }
+
+    }
+
+    return missingNumbers;
 }
 
 // given input as an array of integers, find the duplicate integers in the array
@@ -11,7 +27,22 @@ function findMissingIntegers(input) {
 function findDuplicateIntegers(input) {
 
     // add logic to find missing integers in input
-    
+    let duplicates = [];
+
+    if (input) {
+        
+        input.sort((a, b) => a - b);
+
+        for (i = 1; i < input.length; i++) {
+            
+            if (input[i] === input[i - 1]) {
+                duplicates.push(input[i]);
+            }
+        }
+
+    }
+
+    return duplicates;
 }
 
 // given input as an unsorted array of integers, find the smallest and largest integers in the array
@@ -19,7 +50,17 @@ function findDuplicateIntegers(input) {
 function findSmallestAndLargestIntegers(input) {
 
     // add logic to find missing integers in input
+    let findSmallAndLarge = [];
 
+    if (input) {
+
+        input.sort((a, b) => a - b);
+        findSmallAndLarge.push(input[0]);
+        findSmallAndLarge.push(input[input.length - 1]);
+
+    }
+
+    return findSmallAndLarge;
 }
 
 module.exports.findMissingIntegers = findMissingIntegers;
