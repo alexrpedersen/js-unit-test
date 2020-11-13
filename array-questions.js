@@ -23,6 +23,7 @@ function findMissingIntegers(input) {
 // example: 5,5,8 has duplicate 5.
 function findDuplicateIntegers(input) {
 
+
     let sameInt = [];
 
     if (input) {
@@ -38,11 +39,13 @@ function findDuplicateIntegers(input) {
     }
 
     return sameInt;
+
 }
 
 // given input as an unsorted array of integers, find the smallest and largest integers in the array
 // example: 5,5,8,32,20,10 has smallest as 5 and largest as 32.
 function findSmallestAndLargestIntegers(input) {
+
 
     let sal = [];
 
@@ -76,7 +79,9 @@ function findSum(input, targetSum) {
     }
 
     return target;
+
 }
+
 
 module.exports.findMissingIntegers = findMissingIntegers;
 module.exports.findDuplicateIntegers = findDuplicateIntegers;
