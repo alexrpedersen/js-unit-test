@@ -2,21 +2,25 @@
 // example: 1,2,100 has missing integers 3 through 99.
 function findMissingIntegers(input) {
 
-    let missingNumbers = [];
+
+    let missingNums = [];
 
     if (input) {
 
-       input.sort((a, b)  => a - b);
-       
-       for (i = 1; i < input.length; i++)  {
+        input.sort((a,b) => a - b);
 
-            while (input[i] - input[i - 1] !== 1) {
-                missingNumbers.push(++input[i - 1]);
+        for (i = 1; i < input.length; i++) {
+            let start = input[i - 1];
+            while (input[i] - start !== 1) {
+                missingNums.push(++start);
+
             }
         }
     }
 
-    return missingNumbers;
+
+    return missingNums;
+
 }
 
 // given input as an array of integers, find the duplicate integers in the array
@@ -24,21 +28,23 @@ function findMissingIntegers(input) {
 function findDuplicateIntegers(input) {
 
 
-    let sameInt = [];
+    let duplicates = [];
 
     if (input) {
 
-        input.sort((a, b) => a - b);
+        input.sort((a,b) => a - b);
 
         for (i = 1; i < input.length; i++) {
-            
+
             if (input[i] === input[i - 1]) {
-                sameInt.push(input[i]);
+                duplicates.push(input[i]);
+
             }
         }
     }
 
-    return sameInt;
+
+    return duplicates;
 
 }
 
@@ -47,38 +53,43 @@ function findDuplicateIntegers(input) {
 function findSmallestAndLargestIntegers(input) {
 
 
-    let sal = [];
+    let smallAndLarge = [];
 
     if (input && input.length > 0) {
 
-        input.sort((a, b) => a - b);
-        sal.push(input[0]);
-        sal.push(input[input.length - 1]);
+        input.sort((a,b) => a - b);
+        smallAndLarge.push(input[0]);
+        smallAndLarge.push(input[input.length - 1]);
     }
 
-    return sal;
+    return smallAndLarge;
+
 }
 
 // given input as an array of integers, find all pairs of integers that add up to the targetSum value
 // example: 1,2,3,4,5,6,7,8,9 with targetSum of 8 has pairs 1:7, 2:6, and 3:5 
 function findSum(input, targetSum) {
 
-    let target = [];
+
+    let pairs = []
 
     if (input) {
-        
+
+
         for (i = 0; i < input.length; i++) {
 
             for (j = i + 1; j < input.length; j++) {
 
                 if (input[i] + input[j] === targetSum) {
-                    target.push([input[i], input[j]]);
+
+                    pairs.push([input[i], input[j]]);
                 }
             }
         }
+
     }
 
-    return target;
+    return pairs;
 
 }
 
