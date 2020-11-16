@@ -3,25 +3,22 @@
 function findDuplicateCharacters(input) {
 
 
-    let sameChar = [];
+    let dupChar = [];
 
-    if (input && input.length > 0) {
+    if (input) {
 
-        input.sort((a,b) => a - b);
+        for (i = 1; i < input.length; i++) {
 
-        for (i = 0; i < input.lenth; i++) {
+            let nextChar = input[i - 1];
 
-
-            if (input[i] === input[i + 1]) {
-                sameChar.push(input[i]);
+            if (input[i] === nextChar){
+                dupChar.push(input[i]);
             }
-
         }
-
 
     }
 
-    return sameChar;
+    return dupChar;
 }
 
 module.exports.findDuplicateCharacters = findDuplicateCharacters;
