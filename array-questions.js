@@ -2,6 +2,7 @@
 // example: 1,2,100 has missing integers 3 through 99.
 function findMissingIntegers(input) {
 
+
     let missingInts = [];
 
     if (input) {
@@ -61,6 +62,7 @@ function findSmallestAndLargestIntegers(input) {
 // example: 1,2,3,4,5,6,7,8,9 with targetSum of 8 has pairs 1:7, 2:6, and 3:5 
 function findSum(input, targetSum) {
 
+
     let pair = [];
 
     if(input) {
@@ -77,6 +79,7 @@ function findSum(input, targetSum) {
 
     return pair;
 }
+
 
 module.exports.findMissingIntegers = findMissingIntegers;
 module.exports.findDuplicateIntegers = findDuplicateIntegers;
