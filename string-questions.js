@@ -2,16 +2,12 @@
 // example: abccdefg has has a duplicate character of c
 function findDuplicateCharacters(input) {
 
-
     let dupChar = [];
 
     if (input) {
 
         for (i = 1; i < input.length; i++) {
-
-            let nextChar = input[i - 1];
-
-            if (input[i] === nextChar){
+            if (input[i] === input[i - 1]) {
                 dupChar.push(input[i]);
             }
         }

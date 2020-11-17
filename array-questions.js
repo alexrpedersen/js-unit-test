@@ -3,62 +3,56 @@
 function findMissingIntegers(input) {
 
 
-
-    let missingNums = [];
+    let missingInts = [];
 
     if (input) {
 
-
-        input.sort ((a, b) => a - b);
+        input.sort((a, b) => a - b);
 
         for (i = 1; i < input.length; i++) {
-
-            let start = input[i - 1];
-
-            while (input[i] - start !== 1) {
-                missingNums.push(++start);
+            let begin = input[i - 1];
+            while (input[i] - begin !== 1) {
+                missingInts.push(++begin);
             }
         }
 
     }
 
-    return missingNums;
+    return missingInts;
 }
 
 // given input as an array of integers, find the duplicate integers in the array
 // example: 5,5,8 has duplicate 5.
 function findDuplicateIntegers(input) {
 
-
-    let sameNum = [];
+    let sameNums = [];
 
     if (input) {
 
         input.sort((a, b) => a - b);
 
         for (i = 1; i < input.length; i++) {
-            if (input[i] === input[i -1]) {
-                sameNum.push(input[i]);
+            if (input[i] === input[i - 1]){
+                sameNums.push(input[i]);
             }
         }
 
     }
 
-    return sameNum;
+    return sameNums;
 }
 
 // given input as an unsorted array of integers, find the smallest and largest integers in the array
 // example: 5,5,8,32,20,10 has smallest as 5 and largest as 32.
 function findSmallestAndLargestIntegers(input) {
 
-
     let smallAndLarge = [];
 
     if (input && input.length > 0) {
-        input.sort((a, b) => a - b);
 
+        input.sort((a, b) => a - b);
         smallAndLarge.push(input[0]);
-        smallAndLarge.push(input[input.length - 1]);
+        smallAndLarge.push(input[input.length -1]);
     }
 
     return smallAndLarge;
@@ -69,24 +63,21 @@ function findSmallestAndLargestIntegers(input) {
 function findSum(input, targetSum) {
 
 
-    let pairs = [];
+    let pair = [];
 
-    if (input) {
+    if(input) {
 
         for (i = 0; i < input.length; i++) {
 
             for (j = i + 1; j < input.length; j++) {
                 if (input[i] + input[j] === targetSum) {
-                    pairs.push([input[i], input[j]]);
+                    pair.push([input[i], input[j]]);
                 }
             }
-
-
         }
-
     }
 
-    return pairs;
+    return pair;
 }
 
 
