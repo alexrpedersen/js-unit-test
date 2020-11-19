@@ -18,7 +18,13 @@ function findSmallestAndLargestIntegers(input) {
 function findSum(input, targetSum) {
 }
 
+// given input as an array of integers, find all duplicates of integers and remove them from the array
+// example: 1, 2, 3, 3, 5, 6, 7, 7, 9, 9 result should be 1, 2, 3, 5, 6, 7, 9
+function removeDuplicateIntegers(input) {
+}
+
 module.exports.findMissingIntegers = findMissingIntegers;
 module.exports.findDuplicateIntegers = findDuplicateIntegers;
 module.exports.findSmallestAndLargestIntegers = findSmallestAndLargestIntegers;
 module.exports.findSum = findSum;
+module.exports.removeDuplicateIntegers = removeDuplicateIntegers;
