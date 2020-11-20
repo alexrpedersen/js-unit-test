@@ -13,7 +13,6 @@ function findDuplicateCharacters(input) {
         }
 
     }
-    
     return sameChar;
 }
 

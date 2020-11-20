@@ -68,6 +68,7 @@ function findSum(input, targetSum) {
 
             for (j = i + 1; j < input.length; j++) {
                 if (input[i] + input[j] === targetSum) {
+
                     pairs.push([input[i], input[j]]);
                 }
             }
@@ -76,6 +77,7 @@ function findSum(input, targetSum) {
 
     return pairs;
 }
+
 
 module.exports.findMissingIntegers = findMissingIntegers;
 module.exports.findDuplicateIntegers = findDuplicateIntegers;
