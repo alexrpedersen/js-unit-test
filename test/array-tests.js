@@ -233,4 +233,54 @@ describe('Array', function() {
       assert.strictEqual(results.length, 0);
     });
   });
+
+  describe('#removeDuplicateIntegers()', function(){
+    it('should return array without duplicate', function() {
+      let input = [1, 2, 3, 3, 4, 5];
+      let expectedResults = [1, 2, 3, 4, 5];
+
+      let results = arrayQuestions.removeDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 5);
+      assert.deepStrictEqual(results, expectedResults);
+    });
+
+    it('should return an array with just 2', function() {
+      let input = [2, 2, 2, 2];
+      let expectedResults = [2];
+
+      let results = arrayQuestions.removeDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 1);
+      assert.deepStrictEqual(results, expectedResults);
+    });
+
+    it('should return an empty array', function() {
+      let input = [];
+
+      let results = arrayQuestions.removeDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 0);
+    });
+
+    it('should return an array with 7', function () {
+      let input = [7];
+      let expectedResults = [7];
+
+      let results = arrayQuestions.removeDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 1);
+      assert.deepStrictEqual(results, expectedResults);
+    });
+
+    it('should return array with [1,2,3]', function () {
+      let input = [1, 2, 3];
+      let expectedResults = [1, 2, 3];
+
+      let results = arrayQuestions.removeDuplicateIntegers(input)
+
+      assert.strictEqual(results.length, 3);
+      assert.deepStrictEqual(results, expectedResults);
+    });
+  });
 });
