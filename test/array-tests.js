@@ -99,7 +99,7 @@ describe('Array', function() {
     });
     
     it('should return empty array, one element in input', function() {
-      let input = [42];
+      let input = null;
 
       let results = arrayQuestions.findDuplicateIntegers(input)
 
@@ -107,7 +107,7 @@ describe('Array', function() {
     });
     
     it('should return empty array, no duplicates', function() {
-      let input = [1, 2, 3, 4, 5];
+      let input = null;
 
       let results = arrayQuestions.findDuplicateIntegers(input)
 

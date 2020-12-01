@@ -4,6 +4,7 @@ function findMissingIntegers(input) {
 
     let missingNums = [];
 
+
     if(input) {
 
         input.sort((a, b) => a - b);
@@ -14,7 +15,7 @@ function findMissingIntegers(input) {
                 missingNums.push(++start);
             }
         }
-        
+
     }
 
     return missingNums;
@@ -24,7 +25,9 @@ function findMissingIntegers(input) {
 // example: 5,5,8 has duplicate 5.
 function findDuplicateIntegers(input) {
 
+
     let sameNum = []; 
+
 
     if (input) {
 
@@ -32,11 +35,12 @@ function findDuplicateIntegers(input) {
 
         for (i = 1; i < input.length; i++) {
             if (input[i] === input[i - 1]) {
+
                 sameNum.push(input[i]);
+
             }
         }
     }
-
     return sameNum;
 }
 
@@ -45,6 +49,7 @@ function findDuplicateIntegers(input) {
 function findSmallestAndLargestIntegers(input) {
 
     let smallAndLarge = [];
+
 
     if(input && input.length > 0) {
 
@@ -60,8 +65,10 @@ function findSmallestAndLargestIntegers(input) {
 // given input as an array of integers, find all pairs of integers that add up to the targetSum value
 // example: 1,2,3,4,5,6,7,8,9 with targetSum of 8 has pairs 1:7, 2:6, and 3:5 
 function findSum(input, targetSum) {
+
    
    let pair = [];
+
 
     if (input) {
 
@@ -69,6 +76,7 @@ function findSum(input, targetSum) {
 
             for (j = i + 1; j < input.length; j++) {
                 if (input[i] + input[j] === targetSum) {
+
                     pair.push([input[i], input[j]]);
                 }
             }
@@ -100,7 +108,16 @@ function removeDuplicateIntegers(input) {
     }
 
     return result;
+
+                    pairs.push([input[i], input[j]]);
+                }
+            }
+        }
+    }
+
+    return pairs;
 }
+
 
 module.exports.findMissingIntegers = findMissingIntegers;
 module.exports.findDuplicateIntegers = findDuplicateIntegers;
